@@ -74,7 +74,7 @@ canvas{display:block}
     </div>
     <div class="diff-desc" id="diffDesc">电脑玩家会偶尔失误，适合休闲对战</div>
   </div>
-  <button id="startBtn" onclick="alert('点击成功!'); startGame()">开始对战</button>
+  <button id="startBtn" onclick="startGame()">开始对战</button>
   <div class="controls-info">
     <span>↑ ↓ ← →</span> 输入方向音符 &nbsp;|&nbsp; <span>空格</span> 关键音（节拍器踩点）<br>
     你在<span style="color:#44ff88">红队(左上)</span>，与队友配合击败<span style="color:#4488ff">蓝队</span>！<br>
@@ -626,7 +626,6 @@ function pickAINonMissJudgment(dist){
 // ========== Game flow (2V2) ==========
 let introStartTime=0;
 function startGame(){
-  console.log('startGame called!');
   audioCtx=new AudioCtx();
   document.getElementById('startScreen').style.display='none';
   gameState='playing';
